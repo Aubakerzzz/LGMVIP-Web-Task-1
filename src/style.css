@@ -1,0 +1,255 @@
+/* Add your inline CSS here */
+body {
+  font-family: 'Times New Roman';
+  background-color: #161641;
+  display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+section#section {
+  border: 1px solidrgb(186, 185, 190)f;
+  width: 60vw;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+}
+@keyframes colorChange {
+0% {
+background-color: #dcdce7;
+box-shadow: 100px 100px 100px rgba(116, 13, 13, 0.1);
+}
+3.33% {
+background-color: #ff0000;
+box-shadow: 100px 100px 100px rgba(255, 0, 0, 0.2);
+}
+6.66% {
+background-color: #ff8000;
+box-shadow: 100px 100px 100px rgba(255, 128, 0, 0.2);
+}
+10% {
+background-color: #ffff00;
+box-shadow: 100px 100px 100px rgba(255, 255, 0, 0.3);
+}
+13.33% {
+background-color: #80ff00;
+box-shadow: 100px 100px 100px rgba(128, 255, 0, 0.3);
+}
+16.66% {
+background-color: #00ff00;
+box-shadow: 100px 100px 100px rgba(0, 255, 0, 0.3);
+}
+20% {
+background-color: #00ff80;
+box-shadow: 100px 100px 100px rgba(0, 255, 128, 0.3);
+}
+23.33% {
+background-color: #00ffff;
+box-shadow: 100px 100px 100px rgba(0, 255, 255, 0.4);
+}
+26.66% {
+background-color: #0080ff;
+box-shadow: 100px 100px 100px rgba(0, 128, 255, 0.4);
+}
+30% {
+background-color: #0000ff;
+box-shadow: 100px 100px 100px rgba(0, 0, 255, 0.4);
+}
+/* Add more colors and box shadow variations here up to 100% */
+100% {
+background-color: #dcdce7; /* Repeat the initial color to make the loop seamless */
+box-shadow: 100px 100px 100px rgba(116, 13, 13, 0.1);
+}
+}
+
+
+#section {
+width: 300px;
+padding: 20px;
+border: 5px solid #bebec2;
+border-radius: 8px;
+background-color: #dcdce7;
+box-shadow: 100px 100px 100px rgba(116, 13, 13, 0.1);
+/* ^- Each value represents horizontal-offset, vertical-offset, blur-radius, and spread-radius respectively */
+animation: colorChange 10s infinite;
+}
+
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #642727;
+  margin-bottom: 20px;
+  font-family: 'Times New Roman';
+}
+
+#refresh:hover {
+  cursor: pointer;
+  color: #eaebe7;
+}
+ul#list {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul#list li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+
+
+
+/* Add your keyframes animation here */
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Add hover effects and other CSS animations here */
+li:hover {
+  background-color: #5e2020;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+li.blink {
+  animation: blinking 1s infinite;
+}
+
+.form-text {
+width: 100%;
+padding-right: 0.5rem;
+border: 1px solid transparent; /* Set an initial transparent border */
+}
+
+/* Hover effect */
+.form-text:hover {
+border-color: aqua; /* Change the border color on hover */
+}
+
+
+div#refresh {
+padding-right: 0.25rem;
+}
+
+button.text-btn {
+border: none;
+background: none;
+}
+
+div.title,
+div.form-text,
+li.checkbox {
+border: 10px solid #0fca7c21;
+padding: 0.5rem 0;
+}
+
+span.inputs {
+display: flex;
+width: 100%;
+}
+
+input[type='text'] {
+border: 5px;
+width: 100%;
+padding: 0.5rem;
+}
+
+input:checked + input {
+text-decoration: line-through;
+color: #ccc;
+font-style: italic;
+}
+
+.new,
+.form-text {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+justify-content: space-between;
+margin-top: 10px;
+}
+
+.list li:nth-child(2n + 1) {
+background-color: #eee;
+}
+
+
+img {
+width: 3vw;
+}
+
+.title p {
+padding-left: 0.5rem;
+}
+
+p.error-message {
+color: #f00;
+display: none;
+border: solid;
+}
+.spinner {
+width: 1.5em;
+height: 1.5em;
+cursor: not-allowed;
+border-radius: 50%;
+border: 2px solid #444;
+box-shadow: -10px -10px 10px #6359f8, 0px -10px 10px 0px #9c32e2, 10px -10px 10px #f36896, 10px 0 10px #ff0b0b, 10px 10px 10px 0px#ff5500, 0 10px 10px 0px #ff9500, -10px 10px 10px 0px #ffb700;
+animation: rot55 0.7s linear infinite;
+}
+
+.spinnerin {
+border: 2px solid #444;
+width: 1.5em;
+height: 1.5em;
+border-radius: 50%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+@keyframes rot55 {
+to {
+transform: rotate(360deg);
+}
+}
+.shadow__btn {
+padding: 10px 20px;
+border: none;
+font-size: 17px;
+color: #fff;
+border-radius: 7px;
+letter-spacing: 4px;
+font-weight: 700;
+text-transform: uppercase;
+transition: 0.5s;
+transition-property: box-shadow;
+}
+
+.shadow__btn {
+background: rgb(0,140,255);
+box-shadow: 0 0 25px rgb(0,140,255);
+}
+
+.shadow__btn:hover {
+box-shadow: 0 0 5px rgb(0,140,255),
+          0 0 25px rgb(0,140,255),
+          0 0 50px rgb(0,140,255),
+          0 0 100px rgb(0,140,255);
+}
